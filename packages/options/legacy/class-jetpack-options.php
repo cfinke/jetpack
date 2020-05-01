@@ -46,31 +46,32 @@ class Jetpack_Options {
 					'wpcc_options',
 					'relatedposts',
 					'file_data',
-					'autoupdate_plugins',          // (array)  An array of plugin ids ( eg. jetpack/jetpack ) that should be autoupdated
-					'autoupdate_plugins_translations', // (array)  An array of plugin ids ( eg. jetpack/jetpack ) that should be autoupdated translation files.
-					'autoupdate_themes',           // (array)  An array of theme ids ( eg. twentyfourteen ) that should be autoupdated
-					'autoupdate_themes_translations', // (array)  An array of theme ids ( eg. twentyfourteen ) that should autoupdated translation files.
-					'autoupdate_core',             // (bool)   Whether or not to autoupdate core
-					'autoupdate_translations',     // (bool)   Whether or not to autoupdate all translations
-					'json_api_full_management',    // (bool)   Allow full management (eg. Activate, Upgrade plugins) of the site via the JSON API.
-					'sync_non_public_post_stati',  // (bool)   Allow synchronisation of posts and pages with non-public status.
-					'site_icon_url',               // (string) url to the full site icon
-					'site_icon_id',                // (int)    Attachment id of the site icon file
-					'dismissed_manage_banner',     // (bool) Dismiss Jetpack manage banner allows the user to dismiss the banner permanently
-					'unique_connection',           // (array)  A flag to determine a unique connection to wordpress.com two values "connected" and "disconnected" with values for how many times each has occured
-					'protect_whitelist',           // (array) IP Address for the Protect module to ignore
-					'sync_error_idc',              // (bool|array) false or array containing the site's home and siteurl at time of IDC error
-					'sync_health_status',          // (bool|array) An array of data relating to Jetpack's sync health.
-					'safe_mode_confirmed',         // (bool) True if someone confirms that this site was correctly put into safe mode automatically after an identity crisis is discovered.
-					'migrate_for_idc',             // (bool) True if someone confirms that this site should migrate stats and subscribers from its previous URL
-					'dismissed_connection_banner', // (bool) True if the connection banner has been dismissed
-					'ab_connect_banner_green_bar', // (int) Version displayed of the A/B test for the green bar at the top of the connect banner.
-					'onboarding',                  // (string) Auth token to be used in the onboarding connection flow
-					'tos_agreed',                  // (bool)   Whether or not the TOS for connection has been agreed upon.
-					'static_asset_cdn_files',      // (array) An nested array of files that we can swap out for cdn versions.
-					'mapbox_api_key',              // (string) Mapbox API Key, for use with Map block.
-					'mailchimp',                   // (string) Mailchimp keyring data, for mailchimp block.
-					'xmlrpc_errors',               // (array) Keys are XML-RPC signature error codes. Values are truthy.
+					'autoupdate_plugins',                  // (array)  An array of plugin ids ( eg. jetpack/jetpack ) that should be autoupdated
+					'autoupdate_plugins_translations',     // (array)  An array of plugin ids ( eg. jetpack/jetpack ) that should be autoupdated translation files.
+					'autoupdate_themes',                   // (array)  An array of theme ids ( eg. twentyfourteen ) that should be autoupdated
+					'autoupdate_themes_translations',      // (array)  An array of theme ids ( eg. twentyfourteen ) that should autoupdated translation files.
+					'autoupdate_core',                     // (bool)   Whether or not to autoupdate core
+					'autoupdate_translations',             // (bool)   Whether or not to autoupdate all translations
+					'json_api_full_management',            // (bool)   Allow full management (eg. Activate, Upgrade plugins) of the site via the JSON API.
+					'sync_non_public_post_stati',          // (bool)   Allow synchronisation of posts and pages with non-public status.
+					'site_icon_url',                       // (string) url to the full site icon
+					'site_icon_id',                        // (int)    Attachment id of the site icon file
+					'dismissed_manage_banner',             // (bool) Dismiss Jetpack manage banner allows the user to dismiss the banner permanently
+					'unique_connection',                   // (array)  A flag to determine a unique connection to wordpress.com two values "connected" and "disconnected" with values for how many times each has occured
+					'protect_whitelist',                   // (array) IP Address for the Protect module to ignore
+					'sync_error_idc',                      // (bool|array) false or array containing the site's home and siteurl at time of IDC error
+					'sync_health_status',                  // (bool|array) An array of data relating to Jetpack's sync health.
+					'safe_mode_confirmed',                 // (bool) True if someone confirms that this site was correctly put into safe mode automatically after an identity crisis is discovered.
+					'migrate_for_idc',                     // (bool) True if someone confirms that this site should migrate stats and subscribers from its previous URL
+					'dismissed_connection_banner',         // (bool) True if the connection banner has been dismissed
+					'ab_connect_banner_green_bar',         // (int) Version displayed of the A/B test for the green bar at the top of the connect banner.
+					'onboarding',                          // (string) Auth token to be used in the onboarding connection flow
+					'tos_agreed',                          // (bool)   Whether or not the TOS for connection has been agreed upon.
+					'static_asset_cdn_files',              // (array) An nested array of files that we can swap out for cdn versions.
+					'mapbox_api_key',                      // (string) Mapbox API Key, for use with Map block.
+					'mailchimp',                           // (string) Mailchimp keyring data, for mailchimp block.
+					'xmlrpc_errors',                       // (array) Keys are XML-RPC signature error codes. Values are truthy.
+					'plugins_disconnected_user_initiated', // (array)  Set of plugin slugs that aren't allowed to use `jetpack-connection` upon user request.
 				);
 
 			case 'private':
