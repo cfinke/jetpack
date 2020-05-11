@@ -30,6 +30,7 @@ module.exports = [
 	'json-endpoints/jetpack/class-jetpack-json-api-delete-backup-helper-script-endpoint.php',
 	'json-endpoints/jetpack/class-jetpack-json-api-install-backup-helper-script-endpoint.php',
 	'load-jetpack.php',
+	'modules/contact-form/class-grunion-contact-form-field-data.php',
 	'modules/masterbar/',
 	'modules/memberships/',
 	'modules/module-extras.php',
