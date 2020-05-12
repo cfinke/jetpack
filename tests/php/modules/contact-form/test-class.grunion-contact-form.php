@@ -1,4 +1,4 @@
-<?php
+<?php //phpcs:disable
 require_jetpack_file( 'modules/contact-form/grunion-contact-form.php' );
 
 /**
@@ -1503,5 +1503,59 @@ class WP_Test_Grunion_Contact_Form extends WP_UnitTestCase {
 		$this->plugin->_internal_personal_data_eraser( 'jane@example.com', 1, 1 );
 		$posts = get_posts( array( 'post_type' => 'feedback' ) );
 		$this->assertSame( 0, count( $posts ), 'posts count matches after deleting the other feedback responder' );
+	}
+
+	/**
+	 * Test the Grunion_Contact_Form::get_all_field_data method.
+	 *
+	 * @covers Grunion_Contact_Form::get_all_field_data
+	 */
+	public function test_get_all_field_data() {
+		$default_attrs = array(
+			'options'     => array(),
+			'default'     => null,
+			'values'      => null,
+			'placeholder' => null,
+			'class'       => null,
+		);
+
+		$name_field_attrs = array_merge(
+			array(
+				'label'    => 'Name',
+				'type'     => 'name',
+				'required' => '0',
+				'id'       => 'name',
+			),
+			$default_attrs
+		);
+		$name_field        = new Grunion_Contact_Form_Field( $name_field_attrs );
+		$name_field->value = 'John Doe';
+		$name_field_data   = new Grunion_Contact_Form_Field_Data( $name_field );
+
+		$email_field_attrs = array_merge(
+			array(
+				'label'    => 'Email',
+				'type'     => 'email',
+				'required' => '1',
+				'id'       => 'email',
+			),
+			$default_attrs
+		);
+		$email_field        = new Grunion_Contact_Form_Field( $email_field_attrs );
+		$email_field->value = 'john@example.com';
+		$email_field_data   = new Grunion_Contact_Form_Field_Data( $email_field );
+
+		$expected_output = array(
+			$name_field_attrs['id']  => $name_field_data,
+			$email_field_attrs['id'] => $email_field_data,
+		);
+
+		$form         = new Grunion_Contact_Form( '' );
+		$form->fields = array(
+			$name_field_attrs['id']  => $name_field,
+			$email_field_attrs['id'] => $email_field,
+		);
+
+		$this->assertEquals( $expected_output, $form->get_all_field_data() );
 	}
 } // end class
