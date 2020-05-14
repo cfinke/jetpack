@@ -1,0 +1,1 @@
+<?php return array('dependencies' => array('lodash', 'wp-blocks', 'wp-components', 'wp-element', 'wp-i18n', 'wp-polyfill', 'wp-token-list'), 'version' => '93361a3bbab9032aa959a73fedd635b4');
